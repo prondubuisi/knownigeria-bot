@@ -27,7 +27,7 @@ function call($textMessage) {
       
  try {
 
-    $client = new Client('4c6e0a277e274cf3953e9d984caaf8f5');
+    $client = new Client('dialogflow_client key');
 
     $query = $client->get('query', [
         'query' => $textMessage,

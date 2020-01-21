@@ -173,52 +173,7 @@ class SendQuickReplies {
 
     }
 
-    public function routesQuickReply() {
-
-	     $userID = $this->userID;
-	          
-	     $quickReply =
-	     [
-
-	        'recipient'=>
-	        [
-	          'id'=> $userID
-	        ],
-
-	        'message'=>
-	         [
-	            'text'=> 'Select one out of my available routes',
-	            'quick_replies'=>
-	            [
-	                [
-	                  'content_type'=>'text',
-	                  'title'=>'Lagos-Abuja',
-	                  'payload'=>'book_flights'
-	                ],
-	                [
-	                  'content_type'=>'text',
-	                  'title'=>'Owerri-Lagos',
-	                  'payload'=>'read_news'
-	                ],
-	                [
-	                  'content_type'=>'text',
-	                  'title'=>'Lagos-Kano',
-	                  'payload'=>'book_flights'
-	                ],
-	                [
-	                  'content_type'=>'text',
-	                  'title'=>'Lagos-Nairobi',
-	                  'payload'=>'read_news'
-	                ]
-	            ]
-	        ]
-	     ];
-
-	     $this->curlResponse($quickReply);
-
-
-    }
-
+    
     public function curlResponse($response) {
 
       $accessToken = $this->accessToken;
